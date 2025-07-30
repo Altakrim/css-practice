@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position Playground</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            line-height: 1.6;
+        }
+        .spacer {
+            height: 150px;
+        }
+        /* Fixed Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #333;
+            color: #ffff;
+            padding: 15px;
+            text-align: center;
+            z-index: 100;
+        }
+         /* Main Content */
+         .content {
+            padding-top: 10px; /* for fixed navbar space */
+            padding: 20px;
+            
+         }
+         .sticky-title {
+            position: static;
+            bottom:30px;
+            background-color: yellow;
+            padding: 10px;
+            margin-bottom: 20px;
+         }
+         /* relative Box */
+        .relative-box {
+            position: relative;
+            top: 10px;
+            left: 40px;
+            background-color: lightblue;
+            padding: 20px;
+            margin-bottom: 20px;
+
+        }
+        /* Absolute Box */
+        .absolute-box {
+            position: absolute;
+            top: 150px;
+            right: 30px;
+            background-color: lightcoral;
+            padding: 15px;
+            z-index: 10;
+        }
+        /* Static text */
+         .sticky-text {
+            background-color: lightgreen;
+            padding: 15px;
+            margin: 15px;
+            margin-top: 100px;
+        
+
+         }
+    </style>
+</head>
+<body>
+    <header class="navbar">
+        Fixed Navbar
+    </header>
+    <div class="content">
+       <h2 class="sticky-title">Sticky Section Title</h2>
+       <div class="relative-box">Relative Box</div>
+       <div class="absolute-box">Absolute Box</div>
+       <p class="sticky-text">
+        This is a static paragraph. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consectetur facilis a tempore rem labore! Fuga dolorum iusto quos aliquid quaerat.
+       </p>
+       <div class="spacer"></div>
+    </div>
+</body>
+</html>

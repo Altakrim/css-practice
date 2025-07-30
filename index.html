@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!---font awesome cdn--->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Selector relatives styles */
+        .selectors {
+            border: 2px solid rgb(11, 39, 163);
+            padding: 10px;
+        }
+         h2{
+            color: black;
+            font-size: 40px;
+            text-align: center;
+        }
+
+        .selectors p {
+
+        }
+        .hover:hover {
+            color: red;
+            font-size: bolder;
+            font-weight: bold;
+        }
+        input:focus {
+            background-color: yellow;
+            width:20%;
+        }
+        span:nth-child(3) {
+            color :goldenrod;
+            font-size: 30px;
+        }
+
+
+
+        .flex-container {
+            display: flex;
+            background-color: rgb(13, 127, 240);
+        }
+        .flex-container > div {
+            background-color: aliceblue;
+            margin: 30px;
+            padding: 20px;
+            font-size: 40px;
+        }
+        /* Box Model styles */
+        .box-model {
+            border: 3px solid rgb(11, 39, 163);
+            width: 800px;
+            padding: 5px 30px;
+            margin: 20px auto;
+        }
+        .content::after {
+            content: " (add + content)";
+        }
+        .padding {
+            background-color: lightblue;
+            padding: 5px;
+        }
+        .border {
+            border: dotted;
+        }
+        .margin {
+            margin: 13px ;
+        }
+           /* positioning styles */
+           .positioning {
+            border: 2px solid rgb(11, 39, 163);
+            padding: 10px;
+           }
+           .static {
+            position: static;
+            background-color: rgb(204, 128, 128);
+           }
+            .relative {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            border: 2px solid green;
+         
+            }
+           
+           .relative, .absolute {
+            position: absolute;
+            top: 800px;
+            right: 0;
+            width: 200px;
+            height: 100px;
+            border: 3px solid #73AD21;
+           }
+           .fixed {
+            position: fixed;
+            position: fixed;
+            bottom: 0; 
+            right: 0;
+            left: 0;
+              width: 300px;
+               border: 3px solid #73AD21;
+            background-color: rgb(33, 102, 33);
+
+           }
+           .sticky {
+            position: sticky;
+            background-color: lightcoral;
+            top: 0;;
+           }
+           /* display property styles */
+           .display-property {
+            border: 2px solid rgb(11, 39, 163);
+            padding: 10px;
+           }
+           .block {
+            display: block;
+            background-color: lightpink;
+            padding: 10px;
+
+           }
+           .inline {
+            display: inline;
+            background-color: lightgreen;
+            padding: 10px;
+
+           }
+           .inline-block {
+            display: inline-block;
+            background-color: lightblue;
+            padding: 10px;
+
+           }
+           .flex {
+            display: flex;
+            background-color: rgb(212, 226, 20);
+            padding: 10px;
+
+           }
+           .grid {
+            display: grid;
+            background-color:#73AD21;
+            padding: 10px;
+
+           }
+           .none {
+            display: non;
+            background-color: lightseagreen;
+            border: 2px solid red;
+            padding: 10px;
+           }
+
+    </style>
+</head>
+<body>
+    <section class="selectors">
+       <h2>Selectors</h2>
+       <P><span>HTML elements styling:</span> <ol>
+        <li>element selector ( h1, p, div )</li>
+        <li>id selector ( #myid )</li>
+        <li>class selector ( .myclass )</li>
+        <li>grouping ( h1, p, div {....} )</li>
+        <li>Pseudo-classes ( <span class="hover">:hover</span>,<span class="focus"><input type="text" placeholder=":focus"></span>, <span>:nth-child()</span> )</li>
+       </div>
+     
+    </section>
+    <section class="box-model">
+        <h2>Box Model</h2>
+        <p><strong>Element behavior:</strong><ol>
+            <li class="content">Content: <i>The actual content of the box, where text and images appear.</i></li>
+            <li >Padding: <i class="padding"> The space between the content and the border, inside the box.</i></li>
+            <li >Border: <i class="border">A border that goes around the padding (if any) and content.</i></li>
+            <li>Margin: <i class="margin">The space outside the border, separating the element from others.</i></li>
+        </ol></p>
+    </section>
+ 
+   <section class="positioning"> <!--css positioning-->
+        <h2>Positioning</h2>
+        <p>CSS positioning allows you to control the layout of elements on a web page. There are several positioning schemes:</p>
+        <ul>
+            <li><strong>Static:</strong> <i class="static">The default positioning for all elements. Elements are positioned according to the normal flow of the document.</i></li>
+            <li><strong>Relative:</strong> <i class="relative">Positioned relative to its normal position. You can use the top, right, bottom, and left properties to adjust its position.</i></li>
+            <li><strong>Absolute:</strong> <i class="absolute">Positioned relative to the nearest positioned ancestor (i.e., an ancestor with a position other than static). If there is no such ancestor, it is positioned relative to the initial containing block.</i></li>
+            <li><strong>Fixed:</strong> <i class="fixed">Positioned relative to the viewport, meaning it stays in the same place even when the page is scrolled.</i></li>
+            <li><strong>Sticky:</strong> <i class="sticky">A hybrid of relative and fixed positioning. The element is treated as relative until it crosses a specified threshold, at which point it becomes fixed.</i></li>
+        </ul>
+   </section>
+   <section class="display-property"><!--display property-->
+    <h2>Display Property</h2>
+    <P><strong>Element layout:</strong><Ol>
+        <li><span class="block">block</span></li>
+        <li><span class="inline">inline</span></li>
+        <li><span class="inline-block">inline-block</span></li>
+        <li><span class="flex">flex</span></li>
+        <li><span class="grid">grid</span></li>
+        <li><span class="none">none</span></li>
+    </Ol></P>
+   </section>
+   <section class="flexbox">
+    <h2>Flexbox (Responsive Layout)</h2>
+    <p><strong>Parent-Child Layout:</strong><oi>
+        <li>display: flex</li>
+        <li>justify-content, align-items, flex-direction</li>
+        <li>gap, flex-wrap, align-self</li>
+    </oi></p>
+   </section>
+      <h1>CSS Flexbox</h1>
+    <h2>A flex container with three flex items:</h2>
+    <div class="flex-container">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+    </div>
+    
+</body>
+</html>
