@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox practice</title>
+    <style>
+        body {
+            font-family:sans-serif;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .title {
+            text-align: center;
+            color: #333;
+            margin-bottom: 30px;
+            border: 2px solid;
+        }
+        /* Flex Container properties */
+        .flex-container {
+            display: flex; /* Flex open */
+            flex-direction: row;   /* row | row-reverse | column | column-reverse */
+            flex-wrap:nowrap; /* wrap | nowrap */
+            justify-content: space-between; /* flex-start | center | space-between | space-around | space-evenly */
+            align-items: center; /* stretch | flex-start | center | flex-end | baseline */
+            gap: 15px; /* Row / Column = Gap */
+            height: 300px;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+        }
+        /* Flex Items */
+        .item {
+            background-color: #007bff;
+            color: #f4f4f4;
+            padding: 20px;
+            text-align: center;
+            border-radius: 8px;
+            flex:1 1 1 150px; /* grow , Shrink, basis */
+        }
+        /* Individual item control */
+        .item1 {
+            align-self: first baseline;
+        }
+        .item2 {
+            flex-grow: 2; /* Grow more than others */
+        }
+      
+    
+        .item4 {
+            align-self: flex-end; 
+
+        }
+    </style>
+</head>
+<body>
+    <!-- Parent Properties                         Child Properties 
+         ------------------                       -------------------
+         display : flex;                           flex-grow
+         flex-direction:                           flex-shrink
+         justify-content:                          flex-basis
+         align-items:                              align-self
+         align-content:
+         flex-wrap:
+         gap:  --->
+
+
+        <h1 class="title">Flexbox Practice Playground</h1>
+
+        <div class="flex-container">
+            <div class="item item1">Item 1</div>
+            <div class="item item2">Item 2</div>
+            <div class="item item3">Item 3</div>
+            <div class="item item4">Item 4</div>
+            <div class="item item5">Item 5</div>
+        </div>
+
+    
+</body>
+</html>
