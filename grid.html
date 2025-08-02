@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Practice</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            padding: 20px;
+            background-color: #f0f0f0;
+        } 
+        .title {
+            text-align: center;
+            margin-bottom: 30px;
+            color:#333
+        }
+        /* Grid Container */
+        .grid-container { border: 2px solid;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px,1fr));
+            gap: 20px;
+            padding: 10px;
+        }
+        .item {
+            background-color: #007bff;
+            color: wheat;
+            padding:40px;
+            font-size: 20px;
+            text-align: center;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0,  0.1);
+        }
+        table, caption, tr, th, td {
+            border: 2px solid;
+            width: 50%;
+            height: auto;
+        }
+       
+    </style>
+</head>
+<body>
+ 
+        <table>
+            <caption>CSS Grid Summary: Grid 2D layout (row + column)</caption>
+            <tr>
+                <td>Property</td>
+                <td>Value</td>
+            </tr>
+            <tr>
+                <td>display : grid</td>
+                <td>grid</td>
+
+            </tr>
+            <tr>
+                <td>grid-template-columns:</td>
+                <td>column</td>
+            </tr>
+            <tr>
+                <td>grid-template-rows:</td>
+                <td>row</td>
+            </tr>
+            <tr>
+                <td>gap:</td>
+                <td>20px</td>
+            </tr>
+            <tr>
+                <td>grid-column / row:</td>
+                <td>spanning control</td>
+            </tr>
+            <tr>
+                <td>repeat()</td>
+                <td>dynamic column</td>
+            </tr>
+            <tr>
+                <td>auto-fit, minmax()</td>
+                <td>responsive layout</td>
+            </tr>
+        </table>
+  
+    <h1 class="title">CSS Grid Photo Gallery</h1>
+
+    <div class="grid-container">
+        <div class="item item1">Item1</div>
+        <div class="item item2">Item2</div>
+        <div class="item item3">Item3</div>
+        <div class="item item4">Item4</div>
+        <div class="item item5">Item5</div>
+        <div class="item item6">Item6</div>
+    </div>
+</body>
+</html>
